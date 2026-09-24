@@ -3,9 +3,6 @@
 </p>
 
 <p align="center">
-  <a href="https://dhorse.fun">dhorse.fun</a> ·
-  <a href="https://dhorse.fun/docs">Documentation</a> ·
-  <a href="https://dhorse.fun/verify">Verify the ledger</a> ·
   <a href="https://github.com/RGB-Launchpad/wallet-ext">Wallet</a> ·
   <a href="https://x.com/RGBHorse">@RGBHorse</a>
 </p>
@@ -56,8 +53,9 @@ it.
 The swap fee on the curve goes 20% to the creator and 80% to the platform. After graduation it
 is 35% platform, 55% by liquidity share, 10% creator — the share of the locked liquidity has no
 owner and goes to the platform, while real providers keep their part in full. Splits accrue as
-claimable rather than landing in a balance trade by trade. [Fees and splits](https://dhorse.fun/docs/fees)
-has the full table, referrals included.
+claimable rather than landing in a balance trade by trade. A referral rebate is carved out of the
+platform's share, so the creator and the liquidity providers receive the same with a referrer as
+without one.
 
 ## What can be checked
 
@@ -78,18 +76,15 @@ Three things carry that further:
   stretch of history is fixed by Bitcoin's block time rather than by our word.
 - **Trade payloads are written to Arweave**, one batch per time window, each batch naming the
   transaction before it, with a daily manifest carrying each batch's `sha256`. The figures on
-  the verification page are read back from Arweave, not from this site.
+  the verification page are read back from Arweave, not from the platform.
 - **Reserves are published daily against liabilities**, as a merkle sum tree per asset: every
   node carries a hash and the liability beneath it, and folding your own leaf up its path has
   to arrive at the published root *and* the published total.
 
-Where a recomputation and this site disagree, the recomputation is the answer. The procedure,
-the hash formulas and the endpoints are in
-[Public ledger](https://dhorse.fun/docs/ledger) and
-[Verifying the ledger](https://dhorse.fun/docs/verify), and what each check cannot settle is
-stated there too — a sum tree proves the published total equals the sum of the leaves in it,
-but not that no account was left out. An omitted account's own proof fails, which is how that
-gap closes.
+Where a recomputation and the platform disagree, the recomputation is the answer. The hash
+formulas, the endpoints and the procedure are published, and so is what each check cannot settle
+— a sum tree proves the published total equals the sum of the leaves in it, but not that no
+account was left out. An omitted account's own proof fails, which is how that gap closes.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/RGB-Launchpad/.github/main/profile/media/verify.webp" alt="The verification page: batches on Arweave, what a published trade payload contains, and what it never contains" width="900">
@@ -134,19 +129,4 @@ project is ours, and neither is a small part of this.
 | [**rgb-lib-wasm**](https://github.com/RGB-Launchpad/rgb-lib-wasm) | A fork of UTEXO's WebAssembly bindings of rgb-lib. Two branches hold fixes for things the wallet hit in the browser. MIT |
 
 The platform's own services are not published. What it exposes instead is a read-only API and
-the ledger behind it, both documented below, and both usable without an account.
-
-## Documentation
-
-At [dhorse.fun/docs](https://dhorse.fun/docs), in English and Chinese.
-
-| | |
-|---|---|
-| [Overview](https://dhorse.fun/docs/overview) | What the platform does, and the default parameters |
-| [Launch mechanics](https://dhorse.fun/docs/launch) · [Pricing](https://dhorse.fun/docs/pricing) | The curve, the reserves, how a price forms |
-| [Graduation](https://dhorse.fun/docs/graduation) | The threshold, and what does not move when it is met |
-| [Custody and reserves](https://dhorse.fun/docs/custody) | How funds are held, and what the reserve proof covers |
-| [Public ledger](https://dhorse.fun/docs/ledger) · [Verify it](https://dhorse.fun/docs/verify) | The hash chain, the archive, the checks and their limits |
-| [Public API](https://dhorse.fun/docs/api) · [Trading API](https://dhorse.fun/docs/swap-api) | Read-only endpoints, and the signed ones |
-| [Risks](https://dhorse.fun/docs/risk) | What can go wrong, stated plainly |
-| [About RGB](https://dhorse.fun/docs/rgb) | The protocol, for readers new to it |
+the ledger behind it, both documented, and both usable without an account.
