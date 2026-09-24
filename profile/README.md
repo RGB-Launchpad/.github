@@ -1,11 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/RGB-Launchpad/.github/main/profile/media/logo.webp" alt="Darkhorse" width="88">
-</p>
-
-<h1 align="center">Darkhorse</h1>
-
-<p align="center">
-  <b>Launch and trade RGB assets on Bitcoin. Verify every step.</b>
+  <img src="https://raw.githubusercontent.com/RGB-Launchpad/.github/main/profile/media/banner.svg" alt="Darkhorse — launch and trade RGB assets on Bitcoin, verify every step" width="900">
 </p>
 
 <p align="center">
@@ -14,10 +8,6 @@
   <a href="https://dhorse.fun/verify">Verify the ledger</a> ·
   <a href="https://github.com/RGB-Launchpad/wallet-ext">Wallet</a> ·
   <a href="https://x.com/RGBHorse">@RGBHorse</a>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/RGB-Launchpad/.github/main/profile/media/home.webp" alt="The Darkhorse home page" width="900">
 </p>
 
 ## What it is
