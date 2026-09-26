@@ -3,7 +3,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/RGB-Launchpad/wallet-ext">Wallet</a> ·
   <a href="https://x.com/RGBHorse">@RGBHorse</a>
 </p>
 
