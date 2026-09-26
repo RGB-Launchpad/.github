@@ -99,17 +99,6 @@ account was left out. An omitted account's own proof fails, which is how that ga
 | **The engine is beta software** | Upstream describes rgb-lib as beta and unaudited. That applies here; keep mainnet amounts small |
 | **Test networks carry no value** | Signet and regtest exist for trying things out. Bitcoin and tokens on them are worth nothing |
 
-## The wallet
-
-**[Darkhorse Wallet](https://github.com/RGB-Launchpad/wallet-ext)** is a browser extension for
-RGB assets on Bitcoin. Keys and consignments stay on the device; the wallet validates a
-consignment itself, in the tab. Source, release notes and `SHA256SUMS` for every build are in
-the repository, and a site can ask it to sign in or to produce an invoice without ever seeing a
-key.
-
-**[⬇ Download the latest release](https://github.com/RGB-Launchpad/wallet-ext/releases/latest/download/rgb-wallet.zip)**
-· [Installation guide](https://github.com/RGB-Launchpad/wallet-ext/blob/main/INSTALL.md)
-
 ## Built on other people's work
 
 RGB comes from the [RGB Working Group](https://github.com/RGB-WG) and the
@@ -124,8 +113,7 @@ project is ours, and neither is a small part of this.
 
 | | |
 |---|---|
-| [**wallet-ext**](https://github.com/RGB-Launchpad/wallet-ext) | Darkhorse Wallet: the browser extension, its release zips and their checksums. No npm dependencies and no bundler. Apache-2.0 |
-| [**rgb-lib-wasm**](https://github.com/RGB-Launchpad/rgb-lib-wasm) | A fork of UTEXO's WebAssembly bindings of rgb-lib. Two branches hold fixes for things the wallet hit in the browser. MIT |
+| [**rgb-lib-wasm**](https://github.com/RGB-Launchpad/rgb-lib-wasm) | A fork of UTEXO's WebAssembly bindings of rgb-lib. Two branches hold fixes for things hit running in the browser. MIT |
 
 The platform's own services are not published. What it exposes instead is a read-only API and
 the ledger behind it, both documented, and both usable without an account.
